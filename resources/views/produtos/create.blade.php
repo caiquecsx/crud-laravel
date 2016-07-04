@@ -11,7 +11,7 @@
           @endforeach
         </ul>
       @endif
-      {!! Form::open(['url' => 'produtos/store']) !!}
+      {!! Form::open(['route' => 'produtos.store']) !!}
 
         <div class="form-group">
           {!! Form::label('nome', 'Nome:') !!}

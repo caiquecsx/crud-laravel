@@ -3,6 +3,11 @@
 @section('content')
  <div class="container">
     <h1>Produtos</h1>
+
+    <a href="{{ route('produtos.create') }}" class="btn btn-default">Novo Produto</a>
+    <br>
+    <br>
+
     <table class="table table-striped table-bordered table-hover">
       <thead>
         <tr>
@@ -18,8 +23,8 @@
             <td>{{ $produto->id}}</td>
             <td>{{ $produto->nome}}</td>
             <td>{{ $produto->descricao}}</td>
-            <td><a href="">Editar</a>
-                <a href="#">Remover</a>
+            <td><a href="{{ route('produtos.edit', ['id'=>$produto->id]) }}" class="btn-sm btn-success">Editar</a>
+                <a href="{{ route('produtos.destroy', ['id' =>$produto->id])}}" class="btn-sm btn-danger">Remover</a>
             </td>
           </td>
         @endforeach
